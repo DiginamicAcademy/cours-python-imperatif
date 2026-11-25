@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](00-03-installation-du-poste-de-travail.md) · [Chapitre suivant →](02-les-chaines-de-caracteres.md)
+[← Chapitre précédent](00-03-installation-du-poste-de-travail.md) · [Sommaire](Readme.md) · [Chapitre suivant →](02-les-chaines-de-caracteres.md)
 
 # 01 - Les variables
 
@@ -309,4 +309,4 @@ affecté à `var_2` n'a aucune incidence sur la validité du nom.
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](00-03-installation-du-poste-de-travail.md) · [Chapitre suivant →](02-les-chaines-de-caracteres.md)
+[← Chapitre précédent](00-03-installation-du-poste-de-travail.md) · [Sommaire](Readme.md) · [Chapitre suivant →](02-les-chaines-de-caracteres.md)

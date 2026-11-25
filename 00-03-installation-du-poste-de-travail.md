@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](00-02-introduction-a-python.md) · [Chapitre suivant →](01-les-variables.md)
+[← Chapitre précédent](00-02-introduction-a-python.md) · [Sommaire](Readme.md) · [Chapitre suivant →](01-les-variables.md)
 
 # 00.3 - Installation du poste de travail
 
@@ -227,4 +227,4 @@ essaiables.
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](00-02-introduction-a-python.md) · [Chapitre suivant →](01-les-variables.md)
+[← Chapitre précédent](00-02-introduction-a-python.md) · [Sommaire](Readme.md) · [Chapitre suivant →](01-les-variables.md)

@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](04-les-booleens.md) · [Chapitre suivant →](06-les-constructeurs-de-types.md)
+[← Chapitre précédent](04-les-booleens.md) · [Sommaire](Readme.md) · [Chapitre suivant →](06-les-constructeurs-de-types.md)
 
 # 05 - Les variables, notions plus avancées
 
@@ -313,4 +313,4 @@ langage, il faudrait une troisième variable.
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](04-les-booleens.md) · [Chapitre suivant →](06-les-constructeurs-de-types.md)
+[← Chapitre précédent](04-les-booleens.md) · [Sommaire](Readme.md) · [Chapitre suivant →](06-les-constructeurs-de-types.md)

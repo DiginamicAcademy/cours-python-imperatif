@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](03-les-nombres.md) · [Chapitre suivant →](05-variables-notions-plus-avancees.md)
+[← Chapitre précédent](03-les-nombres.md) · [Sommaire](Readme.md) · [Chapitre suivant →](05-variables-notions-plus-avancees.md)
 
 # 04 - Les booléens
 
@@ -173,4 +173,4 @@ façon.
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](03-les-nombres.md) · [Chapitre suivant →](05-variables-notions-plus-avancees.md)
+[← Chapitre précédent](03-les-nombres.md) · [Sommaire](Readme.md) · [Chapitre suivant →](05-variables-notions-plus-avancees.md)

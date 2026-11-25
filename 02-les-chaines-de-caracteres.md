@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](01-les-variables.md) · [Chapitre suivant →](03-les-nombres.md)
+[← Chapitre précédent](01-les-variables.md) · [Sommaire](Readme.md) · [Chapitre suivant →](03-les-nombres.md)
 
 # 02 - Les chaînes de caractères
 
@@ -212,4 +212,4 @@ La première ligne est l'écriture classique : chaque `\` doit être échappé 
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](01-les-variables.md) · [Chapitre suivant →](03-les-nombres.md)
+[← Chapitre précédent](01-les-variables.md) · [Sommaire](Readme.md) · [Chapitre suivant →](03-les-nombres.md)

@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](07-interaction-avec-lutilisateur.md) · [Chapitre suivant →](09-les-operateurs-mathematiques.md)
+[← Chapitre précédent](07-interaction-avec-lutilisateur.md) · [Sommaire](Readme.md) · [Chapitre suivant →](09-les-operateurs-mathematiques.md)
 
 # 08 - Les méthodes de chaînes de caractères
 
@@ -484,4 +484,4 @@ les boucles des chapitres suivants.
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](07-interaction-avec-lutilisateur.md) · [Chapitre suivant →](09-les-operateurs-mathematiques.md)
+[← Chapitre précédent](07-interaction-avec-lutilisateur.md) · [Sommaire](Readme.md) · [Chapitre suivant →](09-les-operateurs-mathematiques.md)

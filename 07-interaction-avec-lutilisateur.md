@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](06-les-constructeurs-de-types.md) · [Chapitre suivant →](08-les-methodes-de-chaines-de-caracteres.md)
+[← Chapitre précédent](06-les-constructeurs-de-types.md) · [Sommaire](Readme.md) · [Chapitre suivant →](08-les-methodes-de-chaines-de-caracteres.md)
 
 # 07 - Intéragir avec l'utilisateur
 
@@ -208,4 +208,4 @@ Pour s'en convaincre, remplacez un instant `print(int(nombre) + 3.14)` par
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](06-les-constructeurs-de-types.md) · [Chapitre suivant →](08-les-methodes-de-chaines-de-caracteres.md)
+[← Chapitre précédent](06-les-constructeurs-de-types.md) · [Sommaire](Readme.md) · [Chapitre suivant →](08-les-methodes-de-chaines-de-caracteres.md)

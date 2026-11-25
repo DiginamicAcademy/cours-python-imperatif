@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](00-01-deux-paradigmes-programmation.md) · [Chapitre suivant →](00-03-installation-du-poste-de-travail.md)
+[← Chapitre précédent](00-01-deux-paradigmes-programmation.md) · [Sommaire](Readme.md) · [Chapitre suivant →](00-03-installation-du-poste-de-travail.md)
 
 # 00.2 - Introduction à Python
 
@@ -153,4 +153,4 @@ jeu de données réel. Il est noté, son corrigé n'est donc pas publié avec le
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](00-01-deux-paradigmes-programmation.md) · [Chapitre suivant →](00-03-installation-du-poste-de-travail.md)
+[← Chapitre précédent](00-01-deux-paradigmes-programmation.md) · [Sommaire](Readme.md) · [Chapitre suivant →](00-03-installation-du-poste-de-travail.md)

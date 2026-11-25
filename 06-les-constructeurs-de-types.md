@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](05-variables-notions-plus-avancees.md) · [Chapitre suivant →](07-interaction-avec-lutilisateur.md)
+[← Chapitre précédent](05-variables-notions-plus-avancees.md) · [Sommaire](Readme.md) · [Chapitre suivant →](07-interaction-avec-lutilisateur.md)
 
 # 06 - Les constructeurs de types
 
@@ -223,4 +223,4 @@ plus directe.
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](05-variables-notions-plus-avancees.md) · [Chapitre suivant →](07-interaction-avec-lutilisateur.md)
+[← Chapitre précédent](05-variables-notions-plus-avancees.md) · [Sommaire](Readme.md) · [Chapitre suivant →](07-interaction-avec-lutilisateur.md)

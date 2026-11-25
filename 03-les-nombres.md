@@ -1,4 +1,4 @@
-[Sommaire](Readme.md) · [Chapitre précédent →](02-les-chaines-de-caracteres.md) · [Chapitre suivant →](04-les-booleens.md)
+[← Chapitre précédent](02-les-chaines-de-caracteres.md) · [Sommaire](Readme.md) · [Chapitre suivant →](04-les-booleens.md)
 
 # 03 - Les nombres
 
@@ -175,4 +175,4 @@ déterminera ce que vous pourrez faire du nombre.
 
 ---
 
-[Sommaire](Readme.md) · [Chapitre précédent →](02-les-chaines-de-caracteres.md) · [Chapitre suivant →](04-les-booleens.md)
+[← Chapitre précédent](02-les-chaines-de-caracteres.md) · [Sommaire](Readme.md) · [Chapitre suivant →](04-les-booleens.md)

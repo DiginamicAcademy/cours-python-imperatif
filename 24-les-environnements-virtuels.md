@@ -249,4 +249,4 @@ C'est la seconde liste qui porte tout l'enjeu de ce chapitre : `requests` et `f
 
 ---
 
-[← Chapitre précédent](23-les-modules.md) · [Sommaire](Readme.md) · [Vocabulaire et ressources →](A-Glossaire-et-ressources.md)
+[← Chapitre précédent](23-les-modules.md) · [Sommaire](Readme.md) · [Chapitre suivant →](A-Glossaire-et-ressources.md)
