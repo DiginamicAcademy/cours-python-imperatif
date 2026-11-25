@@ -8,16 +8,16 @@
 #   par le support de cours, elle reste dans ce dépôt (chapitre
 #   04-Auteurs-et-contributeurs.md).
 course:
-  name: "Nom du cours"
+  name: "Python impératif — les fondamentaux"
   RNCP:     ## liste des titres RNCP dans lesquels ce cours entre
-    - RNCP0000
+    - RNCP37873
   RNCPBloc: ## liste éventuelle des blocs optionnels visés, titre suivi du bloc (exemple EISI-devpops : RNCP40573BC06)
             ## cette liste peut être vide
-    - RNCP40573BC06
+    []
   timing: 2 ## durée prévue en jours
 
 credits:
   authors: ## signataires du cours, dans l'ordre où ils doivent apparaître
-    - name: Jean-François Vial
+    - name: Robin Hotton
       github: ## comptes GitHub avec lesquels il commite, pour reconnaître ses commits
-        - JeffDiginamic
+        - robinhotton

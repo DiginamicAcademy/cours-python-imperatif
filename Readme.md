@@ -5,53 +5,118 @@
   </picture>
 </p>
 
-# Template de cours public
+# Python impératif — les fondamentaux
 
-Ce dépôt est le modèle des cours Diginamic. On n'y rédige pas de cours : on
-s'en sert pour créer le dépôt de chaque cours, qui hérite de tout l'outillage :
+> Apprendre à programmer avec **Python**, dans l'approche impérative · **RNCP37873** Concepteur développeur d'applications
+> 2 jours de parcours · **aucun prérequis** en programmation
 
-- le **support de cours** en PDF, assemblé à partir du Readme et des chapitres ;
-- les **diapositives**, en PDF et PPTX, sur fond sombre et sur fond clair ;
-- une **release** GitHub par version, qui porte ces documents ;
-- la **partie pédagogique** du cours : un dépôt privé `<cours>-Peda`, où sont
-  produits la déclaration RNCP et le syllabus.
+---
 
-Les fichiers du template servent à la fois de documentation et d'exemple : ce
-Readme montre comment ouvrir un cours, les chapitres comment les écrire.
+## Pourquoi ce cours
 
-## 1. Créer le dépôt d'un cours
+Programmer, c'est écrire à la machine une suite d'instructions assez claire pour qu'elle les exécute sans qu'on ait à la relire. Ce cours prend le temps de poser cette idée brique par brique : ranger des valeurs dans des variables, les transformer, décider, répéter, regrouper dans des fonctions — puis garder chaque projet dans son propre environnement Python.
 
-1. **Créer le dépôt** : sur GitHub, *Use this template* → *Create a new
-   repository*, propriétaire `DiginamicAcademy`, nom du cours sans espace ni
-   accent (`Angular-22`), visibilité *Public*.
-2. **Déclarer le cours** dans `config.yaml` : ce qu'il vise (`course`) et qui
-   le signe (`credits`).
-3. **Faire place nette** : réécrire ce Readme, remplacer les chapitres `00-` à
-   `05-` et `slides.md` par ceux du cours.
-4. **Rédiger**, en poussant au fil de l'eau.
-5. **Publier une version** : `git tag v1.0 && git push origin v1.0`.
+On commence vraiment de zéro. Le chapitre 00.1 montre les deux façons d'organiser un programme — à l'impérative, à l'objets — pour situer ce qu'on apprend ici ; le 00.2 explique pourquoi Python ; le 00.3 installe le poste de travail et fait tourner votre premier script. Ensuite, chaque chapitre est court, manuel, et se termine par des ateliers dont la correction se déplie sous l'énoncé : rien ne vous oblige à attendre quelqu'un pour savoir si vous avez bon.
 
-Chaque étape est détaillée au [chapitre 00](00-Creer-un-depot-de-cours.md).
+Le cours se clôt sur un travail de bout en bout : deux jeux de données réels à exploiter avec ce que vous avez vu, des citations littéraires et les passagers du Titanic. C'est là que les chapitres cessent d'être des exercices.
 
-## 2. Comment rédiger le cours ?
+---
 
-### 2.1 Parties conseillées
+## À l'issue de ce cours
 
-Commencer par une section "Objectifs pédagogiques" rappelant / dévoilant les objectifs du cours.
+Vous serez capable de :
 
-Continuer avec un phasage : quelles sont les étapes du cours ?
+- **Écrire** des scripts Python qui lisent des valeurs, les transforment et les affichent correctement.
+- **Choisir** le type qui convient à une donnée : chaîne, nombre, booléen, liste, tuple, dictionnaire, set.
+- **Expliquer** ce que devient une variable quand on la passe à une fonction, selon qu'elle est muable ou immuable.
+- **Formater** du texte avec les méthodes de chaînes et les littéraux de formatage (`f-strings`).
+- **Traduire** un énoncé en conditions et en boucles, en évitant les pièges classiques (`break`, `continue`, boucle qui ne s'arrête jamais).
+- **Découper** un programme en fonctions lisibles, avec arguments par défaut, `*args`, `**kwargs` et annotations de type.
+- **Mobiliser** les modules standards, lire une documentation et installer un paquet tiers dans un environnement virtuel.
+- **Mener** seul une analyse de données de l'ingestion au résultat affiché.
 
-## 3. Le parcours
+---
 
-Chaque étape est un fichier. On les suit **dans l'ordre** : chacune s'appuie sur la base laissée par la précédente.
+## Prérequis
 
-| # | Étape | Durée | Ce qu'on y fait |
-|---|---|---|---|
-| [00](00-Creer-un-depot-de-cours.md) | Créer le dépôt d'un cours | 15 min | le bouton *Use this template*, ce qu'on garde et ce qu'on remplace, la première version |
-| [01](01-Exemple%20de%20cours%20en%20un%20seul%20fichier.md) | Un cours en un seul fichier | 20 min | la structure type d'un chapitre : objectifs, schémas Mermaid, images, code, parties escamotables |
-| [02](02-Exemple%20de%20cours%20en%20multi-fichier.md) | Organiser un cours en plusieurs fichiers | 20 min | nommage et ordre des chapitres, intercalaires, liens entre fichiers, pièges de génération |
-| [03](03-Slides.md) | Faire les diapositives avec Marp | 20 min | en-tête du diaporama, séparation des diapositives, images, duo sombre / clair, prévisualisation |
-| [04](04-Auteurs-et-contributeurs.md) | Créditer l'auteur et les contributeurs | 10 min | la section `credits` de `config.yaml`, la liste tirée de l'historique git, la section « Crédits » |
-| [05](05-Partie-pedagogique.md) | Déclarer le cours et sa partie pédagogique | 15 min | la section `course` de `config.yaml`, sa vérification, le dépôt privé `-Peda` créé et régénéré à chaque version |
+- **Aucun prérequis en programmation.** Ni algorithme, ni autre langage, ni mathématiques au-delà du collège.
+- **Python 3.11 ou plus récent.** C'est le minimum que demande le TP de fin de cours (dictionnaires ordonnés, annotations `X | Y`). Le chapitre [00.3](00-03-installation-du-poste-de-travail.md) installe la bonne version.
+- **VS Code recommandé**, parce que les captures d'écran du cours le montrent ; n'importe quel éditeur de texte convient.
+- **Droits d'installation de logiciels** sur la machine, et un accès réseau pour le TP (`pip install quote certifi`) — à défaut, le repli hors-ligne est fourni dans le dossier `tp/`.
 
-Ce tableau est le sommaire du cours : il tient lieu de plan et donne au lecteur une idée du temps à prévoir. Les liens pointent vers les fichiers du dépôt ; à la génération du support, ils deviennent des liens internes vers le chapitre correspondant.
+---
+
+## Comment suivre ce cours
+
+Le découpage en deux journées est **une proposition de parcours, pas un horaire imposé** : les supports se parcourent à votre rythme, et les durées ci-dessous sont celles annoncées en tête de chaque chapitre (lecture, atelier et réflexion compris).
+
+| Parcours | Chapitres | Volume annoncé |
+| --- | --- | --- |
+| Journée 1 | [00.1](00-01-deux-paradigmes-programmation.md) à [13](13-les-objets-muables-et-immuables.md) | ≈ 340 min, + 20 min d'extensions facultatives |
+| Journée 2 | [14](14-les-listes.md) à [24](24-les-environnements-virtuels.md) | ≈ 355 min, + 14 min d'extensions facultatives |
+| TP de fin de cours | [TP-01 - Analyser deux jeux de données](tp/TP-01-analyse-donnees.md) | ≈ 2 h, + ≈ 45 min d'approfondissement, en dehors des journées |
+
+La première journée pose les données et la logique : types, chaînes, nombres, conditions. La deuxième organise le code : collections, boucles, fonctions, documentations, modules et environnements virtuels — le chapitre 24 ouvre directement ce qu'il faut pour attaquer le TP. Le TP se fait hors temps de présence, en individuel, et se rend pour notation.
+
+---
+
+## Sommaire
+
+### Journée conseillée 1 — des données aux conditions
+
+| # | Chapitre | Durée |
+| --- | --- | --- |
+| 00.1 | [Deux paradigmes : impératif et objet](00-01-deux-paradigmes-programmation.md) | 15 min |
+| 00.2 | [Introduction à Python](00-02-introduction-a-python.md) | 10 min |
+| 00.3 | [Installation du poste de travail](00-03-installation-du-poste-de-travail.md) | 30 min |
+| 01 | [Les variables](01-les-variables.md) | 20 min |
+| 02 | [Les chaînes de caractères](02-les-chaines-de-caracteres.md) | 15 min |
+| 03 | [Les nombres](03-les-nombres.md) | 10 min |
+| 04 | [Les booléens](04-les-booleens.md) | 10 min |
+| 05 | [Les variables, notions plus avancées](05-variables-notions-plus-avancees.md) | 25 min |
+| 06 | [Les constructeurs de types](06-les-constructeurs-de-types.md) | 15 min |
+| 07 | [Intéragir avec l'utilisateur](07-interaction-avec-lutilisateur.md) | 10 min |
+| 08 | [Les méthodes de chaînes de caractères](08-les-methodes-de-chaines-de-caracteres.md) | 35 min |
+| 09 | [Les opérateurs mathématiques](09-les-operateurs-mathematiques.md) | 30 min |
+| 10 | [Formatter les chaînes de caractères](10-formatter-les-chaines-de-caracteres.md) | 30 min |
+| 11 | [Les structures conditionnelles](11-les-structures-conditionnelles.md) | 40 min (+ 12 fac.) |
+| 12 | [Les modules standards de Python](12-les-modules-standards-de-python.md) | 30 min (+ 8 fac.) |
+| 13 | [Les objets muables et immuables](13-les-objets-muables-et-immuables.md) | 15 min |
+
+**Total ≈ 340 min** de lecture et d'ateliers, extensions facultatives non comptées.
+
+### Journée conseillée 2 — collections, fonctions, projets
+
+| # | Chapitre | Durée |
+| --- | --- | --- |
+| 14 | [Les listes](14-les-listes.md) | 45 min |
+| 15 | [Les tuples](15-les-tuples.md) | 20 min (+ 6 fac.) |
+| 16 | [Les boucles](16-les-boucles.md) | 55 min (+ 8 fac.) |
+| 17 | [Les dictionnaires](17-les-dictionnaires.md) | 35 min |
+| 18 | [Les sets](18-les-sets.md) | 15 min |
+| 19 | [Les fonctions](19-les-fonctions.md) | 45 min |
+| 20 | [Les arguments flexibles](20-les-arguments-flexibles.md) | 25 min |
+| 21 | [Les annotations de type](21-les-annotations-de-type.md) | 20 min |
+| 22 | [Les différentes documentations](22-les-differentes-documentations.md) | 20 min |
+| 23 | [Les modules](23-les-modules.md) | 45 min |
+| 24 | [Les environnements virtuels](24-les-environnements-virtuels.md) | 30 min |
+
+**Total ≈ 355 min**, extensions facultatives non comptées.
+
+### Et après les chapitres
+
+| | Support | Durée |
+| --- | --- | --- |
+| 📁 | [Travaux pratiques — mode d'emploi](tp/README.md) | à lire avant le TP |
+| 🔴 | [TP-01 - Analyser deux jeux de données](tp/TP-01-analyse-donnees.md) | ≈ 2 h + ≈ 45 min de bonus |
+| 📖 | [Glossaire et ressources](A-Glossaire-et-ressources.md) | annexe, à consulter |
+
+---
+
+## Organisation du support
+
+- **Les chapitres sont à la racine du dépôt, dans l'ordre de lecture.** Chacun s'appuie sur la base laissée par le précédent : les suivre dans l'ordre est ce qui fait que rien ne manque.
+- **Chaque chapitre suit la même trame** : objectifs, le cours lui-même avec ses ateliers, « Points clés », puis « Vérifiez vos acquis ». Les exercices portent un titre « Exercice N — … » et leur correction se déplie juste en dessous (« Voir la correction ») : ils sont là pour s'entraîner, pas pour être notés.
+- **Le dossier `tp/`** garde le TP de fin de cours : [l'énoncé](tp/TP-01-analyse-donnees.md), les données dans `tp/data/` (`titanic_survival.csv`), et le [corpus de citations hors-ligne](tp/citations-hors-ligne/README.md) qui remplace le service en ligne quand le réseau manque. Son [mode d'emploi](tp/README.md) dit quoi rendre et depuis quel dossier travailler.
+- **Le glossaire** [A - Glossaire et ressources](A-Glossaire-et-ressources.md) rassemble sigles, termes et documentation officielle. Chaque terme y est renvoyé au chapitre où on le manipule.
+- **Le support PDF est reconstitué automatiquement** à chaque version du dépôt, à partir de ce Readme et des chapitres, dans le même ordre que le sommaire : c'est la release qui porte le document à imprimer.
