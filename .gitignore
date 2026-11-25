@@ -72,6 +72,8 @@ vendor/
 .cache/
 dist/
 build/
+__pycache__/
+*.pyc
 *.log
 npm-debug.log*
 yarn-debug.log*
