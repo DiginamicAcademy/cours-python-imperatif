@@ -379,48 +379,64 @@ jobs:
             --allow-local-files \
             --output "dist/${DOC_SLUG}-slides.pptx"
 
-      # Deux transformations : on remplace le bloc `style:` (fond sombre) par
-      # `WHITE_STYLE`, puis on échange le logo du footer. Le PNG « -blk » est
-      # fait pour le fond sombre ; sur fond blanc, c'est le SVG couleur qu'il faut.
+      # Deux transformations : on ajoute des règles de couleur à la fin du bloc
+      # `style:` (fond sombre), puis on échange le logo du footer. Le PNG « -blk »
+      # est fait pour le fond sombre ; sur fond blanc, c'est le SVG couleur.
       #
       # La version white est écrite à la racine, à côté de `slides.md`, et non
       # dans `build/` : Marp résout les chemins des images par rapport au
       # fichier Markdown, et `./res/logo.png` doit y désigner la même image.
       #
-      # `WHITE_STYLE` ne porte que ce qui ne dépend pas du fond (tailles de
-      # police, encadré des citations…) : les couleurs restent celles du thème
-      # par défaut. La bordure verte des citations fait exception, lisible sur
-      # les deux fonds. Une règle de ce genre ajoutée au style de `slides.md`
-      # doit donc être reportée ici, à l'identique.
+      # Le style de `slides.md` est CONSERVÉ, complété, jamais remplacé. La
+      # version white repartait de zéro et perdait tout ce que `WHITE_STYLE`
+      # n'avait pas recopié à la main : la taille de base, la mise en page en
+      # colonnes, les encadrés, le centrage des diapositives de titre. Deux rendus
+      # d'un même fichier qui n'avaient plus que le texte en commun, et un
+      # entretien manuel destiné à dériver : chaque règle ajoutée au deck aurait
+      # fallu la reporter ici, à l'identique, pour toujours.
       #
-      # Le remplacement du style est borné au front matter — le premier bloc
-      # `---` du fichier. Sans cette borne, un bloc `style:` cité en exemple dans
-      # une diapositive serait vidé lui aussi, et la diapositive qui explique le
-      # gabarit se contredirait d'une version à l'autre.
+      # `WHITE_STYLE` ne porte donc plus que ce qui est illisible sur fond blanc :
+      # le fond lui-même, les titres, le texte courant, les cellules de tableau,
+      # les blocs de code, les encadrés. Tailles, grilles et bordures d'exercice
+      # viennent du fichier et se retrouvent à l'identique dans les deux versions.
       #
-      # L'échange de logo, lui, reste global : une diapositive qui affiche le
-      # logo sombre dans son corps doit passer au logo couleur comme le pied de
-      # page. Le nom du fichier cité dans un exemple y sera donc échangé aussi.
+      # Les règles sont ajoutées À LA FIN du bloc `style:` du front matter, à son
+      # indentation près (deux espaces) : moins indentées, elles fermeraient le
+      # bloc et cesseraient d'être du CSS ; placées après les autres, elles
+      # gagnent à spécificité égale, et propriété par propriété.
+      #
+      # L'échange de logo, lui, reste global : une diapositive qui affiche le logo
+      # sombre dans son corps doit passer au logo couleur comme le pied de page.
+      # Le nom du fichier cité dans un exemple y sera donc échangé aussi.
       - name: Préparer la version white
         if: hashFiles('slides.md') != ''
         env:
           WHITE_STYLE: |
-            style: |
-              section table {font-size: 0.85em}
-              blockquote {border: 2px green solid; border-left-width: 15px; padding: 0.5em 15px;font-style: italic }
+            section {background-color: #ffffff}
+            h1,h2,h3 {color: #3a4bb5}
+            p,ul,li,td,th {color: #1f2328}
+            section table td {background-color: #ffffff}
+            section table th {background-color: #eceff4}
+            pre {background-color: #f6f8fa; color: #1f2328}
+            .card {border: 2px solid #c9ced6}
+            .card-title {color: #3a4bb5}
         run: |
           awk '
             NR == 1 && $0 == "---" { fm = 1; print; next }
-            fm && $0 == "---"      { fm = 0; skip = 0; printf "%s", ENVIRON["WHITE_STYLE"]; print; next }
-            fm && $0 ~ /^style:[[:space:]]*[|>]/ { skip = 1; next }
-            skip && $0 ~ /^[[:space:]]/ { next }
-            skip { skip = 0 }
+            fm && $0 ~ /^style:[[:space:]]*[|>]/ { instyle = 1; print; next }
+            instyle && ( $0 ~ /^[[:space:]]/ || $0 == "" ) { print; next }
+            instyle {
+              instyle = 0
+              n = split(ENVIRON["WHITE_STYLE"], regle, "\n")
+              for (i = 1; i <= n; i++) if (regle[i] != "") print "  " regle[i]
+            }
             { print }
           ' slides.md \
           | sed 's|Logo-diginamic-color-blk\.png|Logo-diginamic-color.svg|g' \
           > slides-white.md
           sed -n '1,/^---$/p' slides-white.md
           grep -n Logo-diginamic slides-white.md
+          grep -q "background-color: #ffffff" slides-white.md || { echo "::error::slides-white.md ne porte aucune reprise de couleur — slides.md n'a pas de bloc style: dans son front matter"; exit 1; }
 
       - name: Générer les diapositives white en PDF
         if: hashFiles('slides.md') != ''
