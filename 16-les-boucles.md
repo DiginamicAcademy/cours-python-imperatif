@@ -188,11 +188,11 @@ Les deux blocs font la même chose. Pour lire une compréhension, retrouvez l'or
 > ⚠️ **Compact ne rime pas avec qualité.**
 >
 > Les compréhensions de liste proposent une fonctionnalité intéressante pour faire
-> des opérations sur des listes, mais comme pour les [assignations parallèles et
-> multiples de variables](05-variables-notions-plus-avancees.md) ou [l'opérateur
-> ternaire](11-les-structures-conditionnelles.md), elles sont à utiliser avec
-> mesure et doivent être évitées lorsque cela met en péril la lisibilité de votre
-> code.
+> des opérations sur des listes, mais comme pour
+> [l'assignation parallèle et les variables multiples](05-variables-notions-plus-avancees.md)
+> ou [l'opérateur ternaire](11-les-structures-conditionnelles.md), elles sont à
+> utiliser avec mesure et doivent être évitées lorsque cela met en péril la
+> lisibilité de votre code.
 >
 > ```python
 > sorted_datas = [data.strip(' ').split('/') for data in message.content.split(':')[1].split(',')]
